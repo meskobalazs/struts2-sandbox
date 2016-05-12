@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
 	"http://struts.apache.org/dtds/struts-2.0.dtd">
-
 <struts>
 	<constant name="struts.action.excludePattern" value="^ws://.+$, ^.*/websocket/.*$"/>
 	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
@@ -27,7 +26,7 @@
 	<package name="default" extends="default-package">
 		<default-action-ref name="404" />
 
-		<action name="index">
+		<action name="index" class="hu.meskobalazs.struts.sandbox.ui.action.Index">
 			<result>index.jsp</result>
 		</action>
 
