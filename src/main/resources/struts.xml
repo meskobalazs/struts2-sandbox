@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.action.excludePattern" value="^ws://.+$, ^.*/websocket/.*$"/>
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.action.extension" value=","/>
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.objectFactory" value="spring" />
+
+	<package name="default-package" extends="struts-default,json-default">
+		<default-interceptor-ref name="paramsPrepareParamsStack" />
+
+		<global-results>
+			<result type="redirect" name="forbidden">403</result>
+			<result type="redirect" name="*">404</result>
+			<result type="freemarker" name="internal_error">500</result>
+		</global-results>
+
+		<global-exception-mappings>
+			<exception-mapping exception="java.lang.Throwable" result="internal_error" />
+		</global-exception-mappings>
+	</package>
+
+	<!-- Login, Dashboard and Menu -->
+	<package name="default" extends="default-package">
+		<default-action-ref name="404" />
+
+		<action name="index">
+			<result>index.jsp</result>
+		</action>
+
+		<action name="403">
+			<result>general/403.jsp</result>
+		</action>
+
+		<action name="404">
+			<result>/general/404.jsp</result>
+		</action>
+
+		<action name="500">
+			<result>/general/500.jsp</result>
+		</action>
+	</package>
+</struts>
