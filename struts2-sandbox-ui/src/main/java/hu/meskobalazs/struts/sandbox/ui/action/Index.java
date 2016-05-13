@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-import hu.meskobalazs.struts.sandbox.ui.beans.ExampleBean;
+import hu.meskobalazs.struts.sandbox.beans.ExampleBean;
 
 public class Index extends ActionSupport {
 

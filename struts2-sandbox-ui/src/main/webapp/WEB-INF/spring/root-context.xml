@@ -13,8 +13,8 @@
 		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-4.0.xsd
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
 	<context:component-scan base-package="hu.meskobalazs" />
-	<!-- <import resource="classpath:META-INF/spring/app-context.xml"/>
-	<context:property-placeholder location="classpath*:magnetofon.properties" /> -->
+	<import resource="classpath*:app-context.xml"/>
+	<!-- <context:property-placeholder location="classpath*:magnetofon.properties" /> -->
 	<task:annotation-driven/>
 	<!-- <aop:aspectj-autoproxy/> -->
 </beans>

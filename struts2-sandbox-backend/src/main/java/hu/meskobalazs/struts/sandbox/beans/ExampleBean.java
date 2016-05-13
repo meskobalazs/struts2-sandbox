@@ -1,4 +1,4 @@
-package hu.meskobalazs.struts.sandbox.ui.beans;
+package hu.meskobalazs.struts.sandbox.beans;
 
 import org.springframework.stereotype.Component;
 

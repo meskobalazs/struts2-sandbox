@@ -22,16 +22,13 @@
 		</global-exception-mappings>
 	</package>
 
-	<!-- Login, Dashboard and Menu -->
 	<package name="default" extends="default-package">
-		<default-action-ref name="404" />
-
 		<action name="index" class="hu.meskobalazs.struts.sandbox.ui.action.Index">
 			<result>index.jsp</result>
 		</action>
 
 		<action name="403">
-			<result>general/403.jsp</result>
+			<result>/general/403.jsp</result>
 		</action>
 
 		<action name="404">
