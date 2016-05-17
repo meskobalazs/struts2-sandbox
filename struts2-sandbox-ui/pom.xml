@@ -17,7 +17,7 @@
 		<project.build.targetEncoding>UTF-8</project.build.targetEncoding>
 
 		<version.spring>4.2.6.RELEASE</version.spring>
-		<version.struts>2.3.28.1</version.struts>
+		<version.struts>2.5</version.struts>
 		<version.slf4j>1.7.21</version.slf4j>
 		<version.log4j>2.5</version.log4j>
 	</properties>
