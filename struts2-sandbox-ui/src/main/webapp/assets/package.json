@@ -1,0 +1,14 @@
+{
+  "name": "struts2-sandbox",
+  "version": "1.0.0",
+  "description": "A sandbox project for various Struts2 experiments.",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt": "^1.0.1"
+  },
+  "devDependencies": {
+    "bower": "~1.7"
+  },
+  "author": "Balázs Meskó",
+  "license": "Apache-2.0"
+}

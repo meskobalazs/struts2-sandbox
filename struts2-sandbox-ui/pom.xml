@@ -97,5 +97,51 @@
 				</excludes>
 			</resource>
 		</resources>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>${version.maven-war}</version>
+				<configuration>
+					<webResources>
+						<resource>
+							<targetPath>/</targetPath>
+							<directory>src/main/webapp</directory>
+							<excludes>
+								<exclude>static/**</exclude>
+							</excludes>
+						</resource>
+						<resource>
+							<targetPath>WEB-INF/classes</targetPath>
+							<directory>src/main/resources</directory>
+						</resource>
+					</webResources>
+					<packagingExcludes>assets/*.*</packagingExcludes>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>com.github.eirslett</groupId>
+				<artifactId>frontend-maven-plugin</artifactId>
+				<version>${version.frontend-maven}</version>
+				<configuration>
+					<nodeVersion>v6.2.0</nodeVersion>
+					<npmVersion>3.9.0</npmVersion>
+					<workingDirectory>src/main/webapp/assets</workingDirectory>
+					<installDirectory>target</installDirectory>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>install-node-and-npm</goal>
+							<goal>npm</goal>
+							<goal>bower</goal>
+							<goal>grunt</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
 	</build>
 </project>

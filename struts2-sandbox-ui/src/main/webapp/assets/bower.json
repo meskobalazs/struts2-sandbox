@@ -1,0 +1,25 @@
+{
+	"name": "struts2-sandbox",
+	"version": "1.0.0",
+	"author": {
+		"name": "Balázs Meskó",
+		"email": "meskobalazs@gmail.com",
+		"url": "https://github.com/meskobalazs"
+	},
+	"description": "A sandbox project for various Struts2 experiments.",
+	"license": "Apache 2.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/meskobalazs/struts2-sandbox.git"
+	},
+	"bugs": {
+		"url": "https://github.com/meskobalazs/struts2-sandbox/issues"
+	},
+	"licenses": {
+		"type": "Apache 2.0",
+		"url": "https://github.com/meskobalazs/struts2-sandbox/LICENSE"
+	},
+	"dependencies": {
+		"bootstrap": "~4"
+	}
+}

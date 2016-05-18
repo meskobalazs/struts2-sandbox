@@ -17,10 +17,21 @@ public class Index extends ActionSupport {
 	@Autowired
 	private ExampleBean bean;
 
+	private String hello;
+
 	@Override
 	public String execute() {
-		log.info(bean.getHello());
+		hello = bean.getHello();
+		log.info(hello);
 		return SUCCESS;
+	}
+
+	public String getHello() {
+		return hello;
+	}
+
+	public void setHello(String hello) {
+		this.hello = hello;
 	}
 
 }
