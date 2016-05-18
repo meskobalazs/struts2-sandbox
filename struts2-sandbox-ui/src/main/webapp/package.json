@@ -4,10 +4,12 @@
   "description": "A sandbox project for various Struts2 experiments.",
   "main": "Gruntfile.js",
   "dependencies": {
-    "grunt": "^1.0.1"
+    "grunt": "^1.0.1",
+    "grunt-cli": "~1.2"
   },
   "devDependencies": {
-    "bower": "~1.7"
+    "bower": "~1.7",
+    "grunt-contrib-copy": "~1"
   },
   "author": "Balázs Meskó",
   "license": "Apache-2.0"

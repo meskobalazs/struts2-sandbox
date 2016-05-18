@@ -109,7 +109,11 @@
 							<targetPath>/</targetPath>
 							<directory>src/main/webapp</directory>
 							<excludes>
-								<exclude>static/**</exclude>
+								<exclude>node_modules/**</exclude>
+								<exclude>bower_components/**</exclude>
+								<exclude>bower.json</exclude>
+								<exclude>Gruntfile.js</exclude>
+								<exclude>package.json</exclude>
 							</excludes>
 						</resource>
 						<resource>
@@ -117,6 +121,10 @@
 							<directory>src/main/resources</directory>
 						</resource>
 					</webResources>
+					<packagingExcludes>
+						node_modules/**,bower_components/**,
+						bower.json,Gruntfile.js,package.json
+					</packagingExcludes>
 				</configuration>
 			</plugin>
 
@@ -127,11 +135,12 @@
 				<configuration>
 					<nodeVersion>v6.2.0</nodeVersion>
 					<npmVersion>3.9.0</npmVersion>
-					<workingDirectory>src/main/webapp/static</workingDirectory>
+					<workingDirectory>src/main/webapp</workingDirectory>
 					<installDirectory>target</installDirectory>
 				</configuration>
 				<executions>
 					<execution>
+						<phase>generate-sources</phase>
 						<goals>
 							<goal>install-node-and-npm</goal>
 							<goal>npm</goal>
