@@ -10,6 +10,7 @@
 
 	<package name="default-package" extends="struts-default,json-default">
 		<default-interceptor-ref name="paramsPrepareParamsStack" />
+		<default-action-ref name="index" />
 
 		<global-results>
 			<result type="redirect" name="forbidden">403</result>
@@ -22,7 +23,7 @@
 		</global-exception-mappings>
 	</package>
 
-	<package name="default" extends="default-package">
+	<package name="default" namespace="/" extends="default-package">
 		<action name="index" class="hu.meskobalazs.struts.sandbox.ui.action.Index">
 			<result>index.jsp</result>
 		</action>
