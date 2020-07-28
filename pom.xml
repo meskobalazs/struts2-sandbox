@@ -19,7 +19,7 @@
 		<version.spring>4.2.6.RELEASE</version.spring>
 		<version.struts>2.5.22</version.struts>
 		<version.slf4j>1.7.21</version.slf4j>
-		<version.log4j>2.5</version.log4j>
+		<version.log4j>2.13.3</version.log4j>
 		<version.frontend-maven>1.0</version.frontend-maven>
 		<version.maven-war>2.6</version.maven-war>
 	</properties>
