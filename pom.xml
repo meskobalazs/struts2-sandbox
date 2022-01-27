@@ -1,11 +1,15 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<name>Struts2 Sandbox Project</name>
 	<groupId>hu.meskobalazs</groupId>
 	<artifactId>struts2-sandbox</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<packaging>pom</packaging>
+
+	<modules>
+		<module>struts2-sandbox-backend</module>
+		<module>struts2-sandbox-ui</module>
+	</modules>
 
 	<properties>
 		<maven.compiler.target>1.8</maven.compiler.target>
@@ -14,14 +18,15 @@
 		<project.build.targetEncoding>UTF-8</project.build.targetEncoding>
 
 		<version.javaee>7.0</version.javaee>
-		<version.hibernate>5.1.0.Final</version.hibernate>
-		<version.derby>10.12.1.1</version.derby>
-		<version.spring>4.2.6.RELEASE</version.spring>
-		<version.struts>2.5.22</version.struts>
-		<version.slf4j>1.7.21</version.slf4j>
+		<version.hibernate>5.6.5.Final</version.hibernate>
+		<version.derby>10.15.2.0</version.derby>
+		<version.spring>5.3.15</version.spring>
+		<version.struts>2.5.29</version.struts>
+		<version.slf4j>1.7.35</version.slf4j>
 		<version.log4j>2.17.1</version.log4j>
-		<version.frontend-maven>1.0</version.frontend-maven>
-		<version.maven-war>2.6</version.maven-war>
+		<version.frontend-maven-plugin>1.0</version.frontend-maven-plugin>
+		<version.maven-resources-plugin>3.2.0</version.maven-resources-plugin>
+		<version.maven-war-plugin>3.3.2</version.maven-war-plugin>
 	</properties>
 
 	<dependencies>
@@ -105,8 +110,23 @@
 		</dependencies>
 	</dependencyManagement>
 
-	<modules>
-		<module>struts2-sandbox-backend</module>
-		<module>struts2-sandbox-ui</module>
-	</modules>
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>${version.maven-resources-plugin}</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-war-plugin</artifactId>
+					<version>${version.maven-war-plugin}</version>
+				</plugin>
+				<plugin>
+					<groupId>com.github.eirslett</groupId>
+					<artifactId>frontend-maven-plugin</artifactId>
+					<version>${version.frontend-maven-plugin}</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
 </project>

@@ -1,16 +1,15 @@
 {
-  "name": "struts2-sandbox",
-  "version": "1.0.0",
-  "description": "A sandbox project for various Struts2 experiments.",
-  "main": "Gruntfile.js",
-  "dependencies": {
-    "grunt": "^1.0.1",
-    "grunt-cli": "~1.2"
-  },
-  "devDependencies": {
-    "bower": "~1.8",
-    "grunt-contrib-copy": "~1"
-  },
-  "author": "Balázs Meskó",
-  "license": "Apache-2.0"
+	"name": "struts2-sandbox",
+	"version": "1.0.0",
+	"description": "A sandbox project for various Struts2 experiments.",
+	"main": "Gruntfile.js",
+	"dependencies": {
+		"bootstrap": "^4"
+	},
+	"author": "Balázs Meskó",
+	"license": "Apache-2.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/meskobalazs/struts2-sandbox"
+	}
 }
