@@ -14,7 +14,5 @@
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
 	<context:component-scan base-package="hu.meskobalazs" />
 	<import resource="classpath*:app-context.xml"/>
-	<!-- <context:property-placeholder location="classpath*:magnetofon.properties" /> -->
 	<task:annotation-driven/>
-	<!-- <aop:aspectj-autoproxy/> -->
 </beans>
