@@ -20,7 +20,7 @@
 		<version.javaee>7.0</version.javaee>
 		<version.hibernate>5.6.15.Final</version.hibernate>
 		<version.derby>10.17.1.0</version.derby>
-		<version.spring>6.1.13</version.spring>
+		<version.spring>6.1.14</version.spring>
 		<version.struts>6.3.0.2</version.struts>
 		<version.slf4j>2.0.9</version.slf4j>
 		<version.log4j>2.22.0</version.log4j>
